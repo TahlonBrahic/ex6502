@@ -3,7 +3,7 @@ const config = @import("config.zig");
 
 var gpa = std.heap.GeneralPurposeAllocator(.{}){};
 
-pub fn main void {
+pub fn main !void {
     var arena = std.heap.ArenaAllocator.init(gpa.allocator());
     defer arena.deinit();
     const allocator = arena.allocator();
