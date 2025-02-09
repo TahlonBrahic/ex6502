@@ -8,5 +8,6 @@ pub fn main !void {
     defer arena.deinit();
     const allocator = arena.allocator();
 
-
+    W65C02S.reset();
+    W65C02S.run();
 }
